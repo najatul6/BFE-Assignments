@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="./assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body>
+    <header class="sticky-top shadow-lg bg-gradient-new">
+      <nav class="navbar navbar-expand-sm container bg-transparent">
+        <a href="#" class="navbar-brand text-white fw-bold"
+          ><img
+            src="./assets/images/logo.png"
+            alt="brand logo"
+            style="width: 50px"
+          />
+          বাংলা ফাইটার</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto px-3 ">
+            <li class="nav-item"><a class="nav-link active fs-5 text-white-50 fw-bold" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link fs-5 fw-bold text-white-50" href="#">About US</a></li>
+            <li class="nav-item"><a class="nav-link fs-5 fw-bold text-white-50" href="#">Courses</a></li>
+            <li class="nav-item"><a class="nav-link fs-5 fw-bold text-white-50" href="#">Services</a></li>
+            <li class="nav-item"><a class="nav-link fs-5 fw-bold text-white-50" href="#">Log In</a></li>
+            <li class="nav-item">
+              <a class="nav-link fs-5 fw-bold text-white-50" href="#">Registration</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <div class="container mt-5">
+      <div class="row gap-3">
+        <div
+          class="col d-flex flex-column justify-content-center align-self-center text-white"
+        >
+          <h1>বাংলা ফাইটার ইঞ্জিনিয়ারিং</h1>
+          <p>আমাদের পেশাগত প্রশিক্ষণের মাধ্যমে আপনার কর্মজীবন সমৃদ্ধ করুন।</p>
+          <div>
+            <button type="submit" class="btn btn-custom rounded-pill">
+              <a href="#" class="nav-link fw-bold text-white">কোর্স সমূহ</a>
+            </button>
+          </div>
+        </div>
+        <div class="col bg-light p-3 rounded-4">
+          <h2 class="text-center mt-3 mb-3">রেজিস্ট্রেশন করুন</h2>
+          <form class="row row-cols-3">
+            <div class="mb-3">
+              <label for="exampleInputName" class="form-label">* Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="exampleInputname"
+                aria-describedby="emailHelp"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputMobile" class="form-label"
+                >* Mobile</label
+              >
+              <input
+                type="tel"
+                class="form-control"
+                id="exampleInputPassword1"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label"
+                >Password</label
+              >
+              <input
+                type="password"
+                class="form-control"
+                id="exampleInputPassword1"
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="exampleInputEmail" class="form-label">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                id="exampleInputPassword1"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label"
+                >Emergency Contact</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="exampleInputPassword1"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label"
+                >* Home District</label
+              >
+              <select class="form-select" aria-label="Default select example">
+                <option selected disabled>Select</option>
+                <option value="Dhaka">Dhaka</option>
+                <option value="Chittagong">Chittagong</option>
+                <option value="Sylhet">Sylhet</option>
+                <option value="Rajshahi">Rajshahi</option>
+                <option value="Mymensingh">Mymensingh</option>
+                <option value="Barisal">Barisal</option>
+                <option value="Kushtia">Kushtia</option>
+                <option value="Rangpur">Rangpur</option>
+                <option value="Jessore">Jessore</option>
+                <option value="Moghbazar">Moghbazar</option>
+                <option value="Shariatpur">Shariatpur</option>
+                <option value="Noakhali">Noakhali</option>
+                <option value="Gazipur">Gazipur</option>
+                <option value="Tangail">Tangail</option>
+                <option value="Jamalpur">Jamalpur</option>
+                <option value="Narayanganj">Narayanganj</option>
+              </select>
+            </div>
+            <div class="mb-3 col-6">
+              <label for="exampleInputPassword1" class="form-label"
+                >Study In (Diploma Engineering)</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="exampleInputPassword1"
+              />
+            </div>
+            <div class="mb-3 col-6">
+              <label for="exampleInputPassword1" class="form-label"
+                >Institute Name</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="exampleInputPassword1"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label"
+                >Technology</label
+              >
+              <select class="form-select" aria-label="Default select example">
+                <option selected disabled>Technology</option>
+                <option value="Computer">Computer</option>
+                <option value="Electrical">Electrical</option>
+                <option value="Mechanical">Mechanical</option>
+                <option value="Civil">Civil</option>
+                <option value="Chemical">Chemical</option>
+                <option value="Biomedical">Biomedical</option>
+                <option value="Aerospace">Aerospace</option>
+                <option value="Environmental">Environmental</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label"
+                >Semester (8th)</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="exampleInputPassword1"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label"
+                >Shift</label
+              >
+              <select class="form-select" aria-label="Default select example">
+                <option selected disabled>Shift</option>
+                <option value="First">First</option>
+                <option value="Second">Second</option>
+                <option value="Not Applicable">Not Applicable</option>
+              </select>
+            </div>
+            <div class="mb-3 col-6">
+              <label for="floatingTextarea" class="form-label"
+                >Present Address</label
+              >
+              <textarea
+                class="form-control"
+                placeholder="Leave a comment here"
+                id="floatingTextarea"
+              ></textarea>
+            </div>
+            <div class="mb-3 col-6">
+              <label for="floatingTextarea" class="form-label"
+                >Permanent Address</label
+              >
+              <textarea
+                class="form-control"
+                placeholder="Leave a comment here"
+                id="floatingTextarea"
+              ></textarea>
+            </div>
+            <div class="mb-3 col-12">
+              <label for="floatingTextarea" class="form-label">Comment</label>
+              <textarea
+                class="form-control"
+                placeholder="Leave a comment here"
+                id="floatingTextarea"
+              ></textarea>
+            </div>
+            <div class="col-6">
+              <button type="submit" class="btn btn-primary">Register</button>
+              <button type="reset" class="btn btn-danger">Reset</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
