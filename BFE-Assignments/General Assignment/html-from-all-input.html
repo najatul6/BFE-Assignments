@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All HTML Form Input</title>
+  </head>
+  <body>
+    <h2
+      style="
+        text-align: center;
+        text-transform: capitalize;
+        text-decoration: underline;
+      "
+    >
+      HTML All Form Input
+    </h2>
+    <form action="">
+      <label for="first-name">First name</label><br />
+      <input
+        type="text"
+        id="first-name"
+        name="firstName"
+        placeholder="Md Najatul"
+      />
+      <br /><br />
+      <label for="last-name">Last name</label><br />
+      <input type="text" id="last-name" name="lastName" placeholder="islam" />
+      <br /><br />
+      <label for="email-address">Email Address</label><br />
+      <input
+        type="email"
+        id="email-address"
+        name="email"
+        placeholder="Enter Email Address"
+        required
+      />
+      <br /><br />
+      <label for="cv">Upload CV</label><br />
+      <input type="file" id="cv" name="cv" />
+      <br /><br />
+      <label for="color">Color</label> <br />
+      <input type="color" id="color" name="color" value="#00008B" />
+      <br /><br />
+      <label for="start-date">Start date:</label> <br />
+      <input
+        type="date"
+        id="start-datte"
+        name="start-class"
+        value="2024-08-20"
+        min="2024-01-01"
+        max="2024-12-31"
+      />
+      <br /><br />
+
+      <label for="meeting-time">Choose your appointment :</label> <br />
+      <input
+        type="datetime-local"
+        id="meeting-time"
+        name="meeting-time"
+        value="2024-08-20T09:30"
+        min="2024-04-07T00:00"
+        max="2024-12-31T00:00"
+      />
+      <br /><br />
+      <label for="month-only">Start month:</label> <br />
+      <input
+        type="month"
+        id="month-only"
+        name="start"
+        min="2021-06"
+        value="2024-08"
+      />
+      <br /><br />
+      <label for="email">Enter your email:</label> <br />
+      <input
+        type="email"
+        id="email"
+        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+        size="30"
+        required
+      />
+      <br /><br />
+      <label for="month-only">Start month:</label> <br />
+      <input
+        type="month"
+        id="month-only"
+        name="start"
+        min="2018-03"
+        value="2018-05"
+      />
+      <br /><br />
+      <label for="tentacles">Number of item (10-100):</label> <br />
+      <input type="number" id="item" name="item" min="10" max="100" />
+      <br /><br />
+      <label for="email">Select your Gender:</label> <br />
+      <input type="radio" id="male" name="male" value="male" checked />
+      <label for="male">Male</label> <br />
+      <input type="radio" id="Female" name="Female" value="Female" />
+      <label for="Female">Female</label> <br />
+      <br /><br />
+      <label for="volume">Volume</label> <br />
+      <input type="range" id="volume" name="volume" min="0" max="11" />
+      <br /><br />
+
+      <input type="search" id="site-search" name="q" />
+      <button>Search</button>
+      <br /><br />
+      <label for="phone">Enter your phone number:</label> <br />
+      <input
+        type="tel"
+        id="phone"
+        name="phone"
+        pattern="(\+\d{1,4}[ -]?)?\(?\d{1,4}\)?([ -]?\d{1,4}){1,3}"
+        required
+      />
+      <br /><br />
+      <label for="pass">Password (16 characters minimum):</label> <br />
+      <input
+        type="password"
+        id="pass"
+        name="password"
+        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).{16,}"
+        required
+      />
+      <br /><br />
+      <label for="pet-select">Choose a pet:</label><br />
+      <select name="pets" id="pet-select">
+        <option value="">--Please choose an option--</option>
+        <option value="dog">Dog</option>
+        <option value="cat">Cat</option>
+        <option value="parrot">Parrot</option>
+        <option value="spider">Spider</option>
+        <option value="goldfish">Goldfish</option>
+      </select>
+      <br /><br />
+      <label for="picture">image input:</label> <br />
+      <input type="image" src="./najatul6.jpg" alt="Submit" width="350" />
+      <br />
+      <br />
+      <label for="textarea">Text Area :</label> <br />
+      <textarea id="textarea" name="example" rows="4" cols="50">
+            This is a Text Area
+        </textarea
+      >
+      <br /><br />
+      <input class="favorite styled" type="button" value="Add to favorites" />
+
+      <input type="reset" value="Reset" />
+
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
