@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery Integration Example</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="./assets/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!-- Bootstrap JavaScript -->
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+
+    <!-- jQuery Library -->
+    <script src="./assets/js/jquery-3.7.1.min.js"></script>
+    <script src="./assets/js/lib/pweb.message.box.js"></script>
+  </head>
+  <body>
+    <div class="container mt-4">
+      <h1 class="mb-4">jQuery and Bootstrap Integration</h1>
+      <button id="showalert" class="btn btn-primary show-success">
+        Show/Hide Message
+      </button>
+      <p id="message" class="mt-3 d-none text-danger">
+        This is a message shown using jQuery and Bootstrap!
+      </p>
+    </div>
+
+    <!-- PWeb.messageBox -->
+    <script>
+        $(document).ready(function () {
+            // Alert message
+            alert("jQuery is successfully integrated!");
+            // Console log message
+            console.log("Hello from jQuery!");
+
+            // Example jQuery with Bootstrap
+            $("#showalert").click(function () {
+                $("#message").toggleClass("d-none");
+            });
+            jQuery(".show-success").click(function () {
+                PWeb.messageBox.showMessage(true, "This is Success Flash")
+            })
+
+        });
+    </script>
+  </body>
+</html>
