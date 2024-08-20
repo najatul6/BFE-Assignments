@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Data Table</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+<table>
+    <h1 style="text-align: center; text-decoration: underline;">Student Data Table</h1>
+    <!-- Table Head -->
+    <thead>
+        <tr>
+            <th rowspan="2">Student ID</th>
+            <th rowspan="2">Name</th>
+            <th colspan="3">Scores</th>
+        </tr>
+        <tr>
+            <th>Math</th>
+            <th>Science</th>
+            <th>English</th>
+        </tr>
+    </thead>
+
+    <!-- Table Body -->
+    <tbody>
+        <!-- Row 1 -->
+        <tr>
+            <td>490862</td>
+            <td>Md Najatul islam</td>
+            <td>85</td>
+            <td>90</td>
+            <td>88</td>
+        </tr>
+        <!-- Row 2 -->
+        <tr>
+            <td>490901</td>
+            <td>Jakariya islam</td>
+            <td>78</td>
+            <td>82</td>
+            <td>80</td>
+        </tr>
+        <!-- Row 3 -->
+        <tr>
+            <td>490902</td>
+            <td>Mizanur Rahman</td>
+            <td>92</td>
+            <td>94</td>
+            <td>91</td>
+        </tr>
+        <!-- Row 4 -->
+        <tr>
+            <td>490904</td>
+            <td>Ashraful islam</td>
+            <td>85</td>
+            <td>87</td>
+            <td>89</td>
+        </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
