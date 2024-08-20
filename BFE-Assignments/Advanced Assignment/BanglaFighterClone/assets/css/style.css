@@ -1,0 +1,16 @@
+body {
+  background: linear-gradient(to right, #1c4350 0%, #095f47 100%);
+}
+
+.bg-gradient-new {
+  background: linear-gradient(to right, #1c4350 0%, #095f47 100%);
+}
+
+.btn-custom{
+    background:  #FDC134;
+    border: 2px solid #FDC134 !important;
+}
+.btn-custom:hover{
+    background: transparent !important;
+    border: 2px solid #FDC134 !important;
+}
