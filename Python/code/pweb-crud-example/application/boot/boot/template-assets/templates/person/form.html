@@ -1,0 +1,43 @@
+{% extends "layout/app-layout.html" %}
+
+{% set name = button|string + " Person" %}
+{% block title %}{{ name }}{% endblock %}
+
+{% block content %}
+    <div class="col-lg-12 mt-3">
+        <div class="card rounded-0 card-t-head mb-3">
+            <div class="bg-holder d-none d-lg-block bg-left"></div>
+            <div class="card-body top-nav-table-header">
+                <div class="d-md-flex justify-content-between d-sm-block align-items-center">
+                    <div class="mb-0 fw-bolder">{{ name }}</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card rounded-0">
+            <div class="card-body">
+                <form class="needs-validation" novalidate method="post" action="{{ action }}">
+                    <div class="row">
+                        {% if isEdit %}
+                            {% form_input field=form.id %}
+                        {% endif %}
+                        {% form_input field=form.name, wrapper="mb-3 col-md-12" %}
+                        {% form_input field=form.email, wrapper="mb-3 col-md-12" %}
+
+                        {% if not isEdit %}
+                            {% form_input field=form.password, wrapper="mb-3 col-md-12" %}
+                        {% endif %}
+
+                        {% form_input field=form.address, wrapper="mb-3 col-md-12" %}
+                        <div class="col-12">
+                            <div class="float-end">
+                                <button type="submit" class="btn btn-primary">{{ button }}</button>
+                                <a href="{{ url_for("person_controller.list") }}" class="btn btn-danger ms-2">Cancel</a>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

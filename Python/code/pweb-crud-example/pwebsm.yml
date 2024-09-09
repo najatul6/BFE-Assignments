@@ -1,0 +1,25 @@
+name: pweb-crud-example
+start_script:
+- python --version
+dependencies:
+- name: Source Development
+  dir: dependencies
+  status: inactive
+  clone:
+    branch: dev
+    status: inactive
+    repo:
+    - url: https://github.com/problemfighter/pweb.git
+      script:
+      - pip install -e .
+- name: Application
+  dir: application
+  status: active
+  module:
+    status: active
+    script:
+    - pip install -e .
+    subdir:
+    - name: boot
+end_script:
+- pip install -e .

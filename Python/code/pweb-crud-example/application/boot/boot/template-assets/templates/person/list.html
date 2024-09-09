@@ -1,0 +1,65 @@
+{% extends "layout/app-layout.html" %}
+
+{% set name = "Person List" %}
+{% block title %}{{ name }}{% endblock %}
+
+{% block content %}
+    <div class="col-lg-12 mt-3">
+        <div class="card mb-3">
+            <div class="bg-holder d-none d-lg-block bg-card top-nav-bg-left">
+            </div>
+            <div class="card-body top-nav-table-header position-relative">
+                <div class="d-md-flex justify-content-between d-sm-block align-items-center">
+                    <div class="mb-0 heading-text fw-bolder">{{- name }} ({{ table.total }})</div>
+                    <form action="">
+                        <div class="input-group align-items-center">
+                            <input class="form-control remove-focus" type="text" placeholder="Search" {% search_name_value %}>
+                            <button class="btn btn-secondary" type="submit" title="Search">
+                                Search
+                            </button>
+                            <a title="Create" class="btn btn-primary" href="{{- url_for("person_controller.create") }}">
+                                Add
+                            </a>
+                            <a class="btn btn-danger" title="Reload" href="{{- url_for("person_controller.list") }}">
+                                Reload
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="card rounded-0">
+            <div class="card-body">
+                <div class="table-responsive-sm ">
+                    <table class="table table-bordered">
+                        <thead class="table-secondary">
+                            <tr>
+                                {% sortable_header name="name" %}
+                                {% sortable_header name="email" %}
+                                <th class="text-center">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for row in table.items %}
+                                <tr>
+                                    <td>{{- row.name|default("", True) }}</td>
+                                    <td>{{- row.email|default("", True) }}</td>
+
+                                    <td class="text-center" style="width: 50px;">
+                                        <div class="btn-group">
+                                            <a href="{{url_for("person_controller.details", id=row.id)}}" type="button" class="btn btn-secondary">Details</a>
+                                            <a href="{{url_for("person_controller.update", id=row.id)}}" type="button" class="btn btn-primary">Edit</a>
+                                            <a href="{{url_for("person_controller.delete", id=row.id)}}" type="button" class="btn btn-danger delete-confirmation">Delete</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                {% pagination current_page=table.page, total_page=table.pages %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

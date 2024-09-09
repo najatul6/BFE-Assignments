@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="{{ url_for('boot-static.static', filename='css/lib/bootstrap.min.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('boot-static.static', filename='js/lib/confirm/jquery-confirm.min.css') }}">
+    <script src="{{ url_for('boot-static.static', filename='js/pweb/pweb.js') }}"></script>
+
+    <title>{% block title %}{{- pweb_app_name }}{% endblock %}</title>
+</head>
+<body>
+    <div class="container p-3">
+        {% block content %}{% endblock %}
+    </div>
+    <script src="{{ url_for('boot-static.static', filename='js/lib/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ url_for('boot-static.static', filename='js/lib/bootstrap-form-validator.js') }}"></script>
+    <script src="{{ url_for('boot-static.static', filename='js/lib/jquery-3.7.1.min.js') }}"></script>
+    <script src="{{ url_for('boot-static.static', filename='js/lib/confirm/jquery-confirm.min.js') }}"></script>
+    <script src="{{ url_for('boot-static.static', filename='js/pweb/pweb.message.box.js') }}"></script>
+    <script src="{{ url_for('boot-static.static', filename='js/pweb/pweb.init.js') }}"></script>
+    <script>
+        PWeb.messageBox.parseAndShowMessage({{- util.pweb_flashed_messages|safe }})
+    </script>
+</body>
+</html>
