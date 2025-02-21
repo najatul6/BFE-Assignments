@@ -8,5 +8,5 @@ wsgi = pweb_engine.get_app()
 
 
 if __name__ == '__main__':
-    # pweb_engine.run()
+    pweb_engine.run()
 
